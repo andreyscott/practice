@@ -1,45 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
-import axios from 'axios';
+import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import {faInstagram } from "@fortawesome/free-solid-svg-icons";
+import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 
-//create a counter with useState
-//create a function that increments the counter
-//create a function that decrements the counter
-// import the api from the url https://randomuser.me/api/ using a functional component called made
-
-const fecthRandomData = async () => {
-  try {
-   const resp = await axios.get('https://randomuser.me/api/');
-   //display the data on the screen
-   JSON.stringify(resp.data.results[0].name.first);
-
- } catch (err) {
-   console.log(err);
- }
-}
 
 export default function App() {
-  // create a useffect hook that runs the fecthRandomData function  when the component loads
- 
- const [randomData, setRandomData] = useState('');
+  
 
-  useEffect(() => { 
-   fecthRandomData().then((randomData) => {
-      setRandomData(randomData);
-   });
+  return <div className="icons">
+ <a href="https://twitter/andreyscott5"
+ className="facebook social">
+<FontAwesomeIcon icon={faTwitter} size="2x" />
+</a>
+{/* <a href="https://www.instagram.com/andrayscott/"
+className="instagram social">
+ <FontAwesomeIcon icon={faInstagram} size="2x" />
+</a> */}
 
-  }, []);
-
-    return(
-      <div> 
-       <div>
-         {
-            randomData
-         }
-       </div>
-    </div>
-    )
+</div>;
 }
-
-
-
