@@ -11,7 +11,8 @@ export const Counter = () => {
     }
   return (
       <div style={{ display: 'flex'}}>
-      <button onClick={increment}>+</button>
+      <button onClick={increment}
+      >+</button>
     <p >{count}</p>
     <button onClick={decrement}>-</button>
 
