@@ -7,26 +7,28 @@ function Test() {
     const fetchData = async () => {
         return await axios.get('https://jsonplaceholder.typicode.com/users')
             .then(({data}) => {
-                console.log(data)
+            
                 return  JSON.stringify(data) 
             }).catch(err => {
                 console.log(err)
             }
             )
 
+
+
     }
 
-    useEffect(() => {
+    useEffect(() =>{
         fetchData().then(user => {
-            setUsers(user || 'pls work now')
-            })
-            }, [])
-  return (
-    <div>
- {user}
-      
-    </div>
-  )
-}
+           setUsers(user || 'pls work now') 
+          
+    })
+}, [])
 
-export default Test
+    return (
+        <div>
+            {user}
+            <h1>hello</h1>
+            </div>
+    )
+}
