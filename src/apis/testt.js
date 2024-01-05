@@ -7,6 +7,7 @@ function Test() {
     const fetchData = async () => {
         return await axios.get('https://jsonplaceholder.typicode.com/users')
             .then(({data}) => {
+                
             
                 return  JSON.stringify(data) 
             }).catch(err => {

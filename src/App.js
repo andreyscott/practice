@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 // import axios from 'axios'
 import Test from './apis/test'
 import { Counter } from './counter/Counter'
+import EmailTemplate from './components/email/index.'
 
 //import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
@@ -35,8 +36,9 @@ export default function App() {
   return (
     <div>
     <Counter />
+    <EmailTemplate />
      {/* {users} */}
-     <Test />
+     {/* <Test /> */}
     {/* {users.map(user => <h1>{user.name}</h1>)} */}
     </div>
   )
